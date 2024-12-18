@@ -25,6 +25,8 @@ Dieses Projekt ist ein **Rechtschreibtrainer**, der spielerisch das Lernen von W
 - **Build-Tool**: Gradle
 - **GUI**: Swing (`JOptionPane` und `JFrame`)
 - **Persistenz**: Speicherung der Fortschritte in **JSON**-Dateien (weitere Speicheroptionen wie XML oder SQLite sind möglich).
+- **Javadoc**: [📄 Javadoc-Dokumentation](Javadoc/index.html)
+
 
 ---
 ## 🖼 **Beispielansicht**
