@@ -1,0 +1,26 @@
+{
+    "correctAttempts": 3,
+    "totalAttempts": 5,
+    "words": [
+        {
+            "wort": "Hund",
+            "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPbcC_F9soRYhsRQyrjT0y3hP04PLKYWR6fA&s"
+        },
+        {
+            "wort": "Katze",
+            "url": "https://image.geo.de/34423086/t/u8/v1/w1440/r0/-/katze-as-97589769.jpg"
+        },
+        {
+            "wort": "Waschbär",
+            "url": "https://static.wixstatic.com/media/10d451_d9b595396cb541a2a36bdf9a3414ecef~mv2.png"
+        },
+        {
+            "wort": "Igel",
+            "url": "https://image.geo.de/30154986/t/gy/v3/w1440/r1/-/igel-geolino-shutterstock-jpg--88472-.jpg"
+        },
+        {
+            "wort": "TGM",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Brigittenau_%28Wien%29_-_TGM-Hauptgeb%C3%A4ude.JPG/280px-Brigittenau_%28Wien%29_-_TGM-Hauptgeb%C3%A4ude.JPG"
+        }
+    ]
+}

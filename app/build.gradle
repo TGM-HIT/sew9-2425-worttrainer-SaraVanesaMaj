@@ -17,19 +17,16 @@ repositories {
 }
 
 dependencies {
-    // This dependency is used by the application.
+    implementation 'org.json:json:20231013' // JSON-Abhängigkeit hinzufügen
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.3' // Falls du Tests verwendest
     implementation libs.guava
 }
 
-testing {
-    suites {
-        // Configure the built-in test suite
-        test {
-            // Use JUnit Jupiter test framework
-            useJUnitJupiter('5.10.3')
-        }
-    }
+
+tasks.named('test') {
+    useJUnitPlatform() // Aktiviert JUnit 5
 }
+
 
 // Apply a specific Java toolchain to ease working on different environments.
 java {
@@ -46,3 +43,4 @@ application {
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
 }
+

@@ -5,9 +5,6 @@ public class WortEintrag {
     private String url;
 
     public WortEintrag(String wort, String url) {
-        if (wort == null || url == null || !url.startsWith("http")) {
-            throw new IllegalArgumentException("Ungültiges Wort oder URL");
-        }
         this.wort = wort;
         this.url = url;
     }
