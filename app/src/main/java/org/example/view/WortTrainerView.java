@@ -29,15 +29,25 @@ public class WortTrainerView {
         JPanel bottomPanel = new JPanel(new GridLayout(2, 1));
         correctLabel = new JLabel("Richtige Woerter: 0");
         attemptsLabel = new JLabel("Anzahl Woerter: 0");
-        resetButton = new JButton("Zuruecksetzen");
-        addButton = new JButton("Wort hinzufuegen");
-        saveButton = new JButton("Speichern");
-        loadButton = new JButton("Laden");
         bottomPanel.add(correctLabel);
         bottomPanel.add(attemptsLabel);
 
         //Button Panel: Enthält die Steuerungsbuttons
-        JPanel buttonPanel = new JPanel(new GridLayout(2, 2));
+        JPanel buttonPanel = new JPanel(new GridLayout(2, 2, 10, 10)); // Abstand zwischen den Buttons
+        Dimension buttonSize = new Dimension(150, 50); // Größe der Buttons
+
+        resetButton = new JButton("Zuruecksetzen");
+        resetButton.setPreferredSize(buttonSize);
+
+        addButton = new JButton("Wort hinzufuegen");
+        addButton.setPreferredSize(buttonSize);
+
+        saveButton = new JButton("Speichern");
+        saveButton.setPreferredSize(buttonSize);
+
+        loadButton = new JButton("Laden");
+        loadButton.setPreferredSize(buttonSize);
+
         buttonPanel.add(resetButton);
         buttonPanel.add(addButton);
         buttonPanel.add(saveButton);
