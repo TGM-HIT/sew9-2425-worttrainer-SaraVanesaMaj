@@ -18,8 +18,9 @@ repositories {
 
 dependencies {
     implementation 'org.json:json:20231013' // JSON-Abhängigkeit hinzufügen
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.3' // Falls du Tests verwendest
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.3'
     implementation libs.guava
+    implementation 'joda-time:joda-time:2.12.5'
 }
 
 
