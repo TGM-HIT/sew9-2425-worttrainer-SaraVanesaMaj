@@ -13,22 +13,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Repository auschecken
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # 2. Java einrichten
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '17' # Ersetze durch deine benötigte Java-Version
+          java-version: '17'
           distribution: 'temurin'
 
-      # 3. Jar-Datei erstellen
+      # Berechtigung für gradlew setzen
+      - name: Grant execute permission for Gradle
+        run: chmod +x gradlew
+
       - name: Build Jar File
         run: ./gradlew build
 
-      # 4. Artefakt hochladen (optional)
       - name: Upload Jar Artifact
         uses: actions/upload-artifact@v3
         with:
