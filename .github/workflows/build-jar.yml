@@ -1,4 +1,4 @@
-name: Build Jar File
+name: Test Coverage and Upload
 
 on:
   push:
@@ -9,28 +9,28 @@ on:
       - main
 
 jobs:
-  build-jar:
+  test-and-upload-coverage:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Repository auschecken
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      # 2. Java einrichten
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
           java-version: '17' # Passe die Java-Version an, falls nötig
           distribution: 'temurin'
 
-      - name: Grant execute permission for Gradle
-        run: chmod +x gradlew
+      # 3. Gradle-Build und Tests ausführen
+      - name: Run Tests with Coverage
+        run: ./gradlew clean test jacocoTestReport
 
-      - name: Build Jar File
-        run: ./gradlew build
-
-      # Jar-File als Artefakt hochladen
-      - name: Upload Jar Artifact
+      # 4. Testabdeckungsbericht hochladen
+      - name: Upload Test Coverage Report
         uses: actions/upload-artifact@v3
         with:
-          name: jar-file
-          path: app/build/libs/*.jar
+          name: test-coverage-report
+          path: build/reports/jacoco/test/html/**
