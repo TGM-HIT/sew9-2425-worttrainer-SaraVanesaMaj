@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.WortTrainerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-01-15T00:29:35" hostname="LAPTOP-22HGRJQC" time="0.034">
+  <properties/>
+  <testcase name="testPersistenceSaveAndLoad()" classname="org.example.WortTrainerTest" time="0.023"/>
+  <testcase name="testAddWord()" classname="org.example.WortTrainerTest" time="0.001"/>
+  <testcase name="testCheckWordCorrect()" classname="org.example.WortTrainerTest" time="0.005"/>
+  <testcase name="testCheckWordIncorrect()" classname="org.example.WortTrainerTest" time="0.002"/>
+  <testcase name="testSelectRandomWord()" classname="org.example.WortTrainerTest" time="0.001"/>
+  <system-out><![CDATA[Speichern erfolgreich!
+Laden erfolgreich!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
