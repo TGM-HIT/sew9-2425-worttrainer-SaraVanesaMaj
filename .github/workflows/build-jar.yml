@@ -1,36 +1,39 @@
-name: Build Jar File
+name: Build Jar File  # Name des gesamten Workflows
 
 on:
   push:
     branches:
-      - main
+      - main        # Workflow ausführen, wenn ein Push auf den "main"-Branch erfolgt
   pull_request:
     branches:
-      - main
+      - main        # Workflow auch auf Pull Requests in den "main"-Branch anwenden
 
 jobs:
   build-jar:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Der Job läuft in einer Ubuntu-Umgebung
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+        # Lädt den Code des aktuellen Repositories (inkl. Branch) in die Action-Umgebung
 
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '17' # Passe die Java-Version an, falls nötig
+          java-version: '17'    # Java-Version 17 verwenden
           distribution: 'temurin'
 
       - name: Grant execute permission for Gradle
         run: chmod +x gradlew
+        # Macht das "gradlew"-Skript ausführbar (wichtig auf Linux-Systemen)
 
       - name: Build Jar File
         run: ./gradlew build
+        # Führt den Build-Prozess über Gradle aus und erstellt das Jar-File
 
-      # Jar-File als Artefakt hochladen
       - name: Upload Jar Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: jar-file
+          name: jar-file        # Name des hochgeladenen Artifacts
           path: app/build/libs/*.jar
+          # Pfad zum fertigen Jar-File, das als Build-Artefakt hochgeladen wird
