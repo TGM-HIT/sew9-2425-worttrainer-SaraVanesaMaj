@@ -19,16 +19,16 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
+          java-version: '17' # Passe die Java-Version an, falls nötig
           distribution: 'temurin'
 
-      # Berechtigung für gradlew setzen
       - name: Grant execute permission for Gradle
         run: chmod +x gradlew
 
       - name: Build Jar File
         run: ./gradlew build
 
+      # Jar-File als Artefakt hochladen
       - name: Upload Jar Artifact
         uses: actions/upload-artifact@v3
         with:
